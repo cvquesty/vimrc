@@ -3,6 +3,7 @@ filetype plugin indent on
 execute pathogen#infect()
 syntax on
 colorscheme elflord
+set paste
 set nocompatible
 set backspace=indent,eol,start
 set tabstop=2
@@ -83,9 +84,6 @@ let g:rbpt_colorpairs = [
     \ ['red',         'firebrick3'],
     \ ]
 
-" Turn off wrapping when pasting
-set incsearch
-set paste
 
 " Syntastic Puppet Stuff
 set statusline+=%#warningmsg#
