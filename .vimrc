@@ -3,18 +3,19 @@ filetype plugin indent on
 execute pathogen#infect()
 syntax on
 colorscheme elflord
-set paste
 set nocompatible
 set backspace=indent,eol,start
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
 set expandtab
+set foldmethod=syntax
+setlocal foldmethod=manual
 let g:puppet_align_hashes = 1
 
 " Turn on NERDTree
-"autocmd StdinReadPre * let s:std_in=1
-"autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " Airline Status Bar
 let g:airline_theme='molokai'
@@ -84,7 +85,6 @@ let g:rbpt_colorpairs = [
     \ ['red',         'firebrick3'],
     \ ]
 
-
 " Syntastic Puppet Stuff
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -100,3 +100,7 @@ let g:syntastic_auto_jump = 0
 let g:syntastic_enable_perl_checker = 1
 let g:syntastic_puppet_checkers=['puppetlint']
 let g:syntastic_python_checkers = ['pylint']
+
+" Python Editor
+let g:pydiction_location = '~/.vim/bundle/pydiction/complete-dict'
+let g:pydiction_menu_height = 3
