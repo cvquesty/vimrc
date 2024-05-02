@@ -47,7 +47,7 @@ if !exists('g:airline_symbols')
 " Vim GitGutter
 set shell=/bin/bash
 set signcolumn=yes
-let g:gitgutter_max_signs = 500
+let g:gitgutter_max_signs = 5000
 let g:gitgutter_realtime = 1
 let g:gitgutter_highlight_lines = 1
 
